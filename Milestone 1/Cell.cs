@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/**
+ * Jordan Riley, This is my own work.
+ * Milestone 1
+ * 
+ */ 
 
 namespace Milestone1
 {
     class Cell
     {
-
+        //class member vars
         private int collumn;
         private int row;
         private Boolean visited;
@@ -16,6 +21,7 @@ namespace Milestone1
         private int liveNeighbors;
 
 
+        //default constructor
         public Cell()
         {
             collumn = -1;
@@ -25,7 +31,7 @@ namespace Milestone1
             liveNeighbors = 0;
         }
 
-
+        //getters and setters
         public int getCollumn()
         {
             return collumn;

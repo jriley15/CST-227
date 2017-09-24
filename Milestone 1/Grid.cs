@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/**
+ * Jordan Riley, This is my own work.
+ * Milestone 1
+ * 
+ */ 
 
 namespace Milestone1
 {
     class Grid
     {
-
+        //class member vars
         private int rows;
         private int collumns;
         private Cell[,] cells;
 
 
+        //default constructors
         public Grid(int rows, int collumns)
         {
             this.rows = rows;
@@ -23,7 +29,7 @@ namespace Milestone1
             activateCells();
         }
 
-
+        //fills up the 2d cell array
         private void generateCells()
         {      
             for (int x = 0; x < collumns; x++)
@@ -37,6 +43,10 @@ namespace Milestone1
             }
         }
 
+        //loops through every cell and randomly sets
+        //20 percent of them to 'live' and increments
+        //the live cells neighbors to know how many 
+        //live cells there are in the surrounding area
         private void activateCells()
         {
             Random rand = new Random();
@@ -68,6 +78,9 @@ namespace Milestone1
                 }
             }
         }
+
+        //reveals the whole grid to the user
+        //in the console
 
         public void reveal()
         {
